@@ -16,5 +16,37 @@ namespace OOPBorrowingSystem
         {
             InitializeComponent();
         }
+
+        private void buttonBorrow_Click(object sender, EventArgs e)
+        {
+            Borrow form3 = new Borrow();
+            form3.Show();
+            this.Hide();
+            form3.FormClosed += (s, args) => this.Close();
+        }
+
+        private void buttonReturn_Click(object sender, EventArgs e)
+        {
+            Return form4 = new Return();
+            form4.Show();
+            this.Hide();
+            form4.FormClosed += (s, args) => this.Close();
+        }
+
+        private void buttonHistory_Click(object sender, EventArgs e)
+        {
+            History form5 = new History();
+            form5.Show();
+            this.Hide();
+            form5.FormClosed += (s, args) => this.Close();
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            LoginForm form1 = new LoginForm();
+            form1.Show();
+            this.Hide();
+            form1.FormClosed += (s, args) => this.Close();
+        }
     }
 }
