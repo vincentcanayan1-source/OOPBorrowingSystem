@@ -103,6 +103,8 @@
     <Compile Include="Selection.Designer.cs">
       <DependentUpon>Selection.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="UserRepository.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
