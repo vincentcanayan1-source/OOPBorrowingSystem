@@ -34,11 +34,13 @@
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.buttonBorrow = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(460, 67);
+            this.textBoxUsername.Location = new System.Drawing.Point(16, 12);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(200, 22);
             this.textBoxUsername.TabIndex = 0;
@@ -46,28 +48,33 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(460, 95);
+            this.comboBox1.Items.AddRange(new object[] {
+            "Basketball",
+            "Baseball",
+            "Volleyball",
+            "tennisball"});
+            this.comboBox1.Location = new System.Drawing.Point(16, 40);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(200, 24);
             this.comboBox1.TabIndex = 1;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(460, 125);
+            this.dateTimePicker1.Location = new System.Drawing.Point(16, 70);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(460, 153);
+            this.textBoxQuantity.Location = new System.Drawing.Point(16, 98);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(200, 22);
             this.textBoxQuantity.TabIndex = 3;
             // 
             // buttonBorrow
             // 
-            this.buttonBorrow.Location = new System.Drawing.Point(460, 181);
+            this.buttonBorrow.Location = new System.Drawing.Point(16, 126);
             this.buttonBorrow.Name = "buttonBorrow";
             this.buttonBorrow.Size = new System.Drawing.Size(75, 23);
             this.buttonBorrow.TabIndex = 4;
@@ -77,7 +84,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(541, 181);
+            this.buttonCancel.Location = new System.Drawing.Point(97, 126);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 5;
@@ -85,21 +92,31 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.button2_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonCancel);
+            this.groupBox1.Controls.Add(this.buttonBorrow);
+            this.groupBox1.Controls.Add(this.textBoxQuantity);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.textBoxUsername);
+            this.groupBox1.Location = new System.Drawing.Point(444, 55);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(253, 171);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            // 
             // Borrow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonBorrow);
-            this.Controls.Add(this.textBoxQuantity);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Borrow";
             this.Text = "Borrow";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -111,5 +128,6 @@
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.Button buttonBorrow;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
