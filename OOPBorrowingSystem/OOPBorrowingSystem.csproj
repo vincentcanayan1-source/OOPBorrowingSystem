@@ -105,6 +105,9 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserRepository.cs" />
+    <EmbeddedResource Include="Borrow.resx">
+      <DependentUpon>Borrow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

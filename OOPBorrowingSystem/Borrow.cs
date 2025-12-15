@@ -16,5 +16,56 @@ namespace OOPBorrowingSystem
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Selection form2 = new Selection();
+            form2.Show();
+            this.Hide();
+            form2.FormClosed += (s, args) => this.Close();
+        }
+
+        private void buttonBorrow_Click(object sender, EventArgs e)
+        {
+            string username = textBoxUsername.Text;
+            string borroweditems = comboBox1.Text;
+            string borrowdate = dateTimePicker1.Text;
+            string borrowQuantity = textBoxQuantity.Text;
+            bool isReturned = false;
+            if (string.IsNullOrWhiteSpace(username) ||
+                string.IsNullOrWhiteSpace(borroweditems) ||
+                string.IsNullOrWhiteSpace(borrowdate) ||
+                string.IsNullOrWhiteSpace(borrowQuantity))
+            {
+                MessageBox.Show("Please enter your Name.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                User userToSave = new User();
+                userToSave.Username = username;
+                userToSave.BorrowedItems = borroweditems;
+                userToSave.BorrowDate = borrowdate;
+                userToSave.BorrowNumber = int.Parse(borrowQuantity);
+                userToSave.Returned = false;
+
+                UserRepository repository = new UserRepository();
+                bool isSaved = repository.Add(userToSave);
+
+
+
+
+
+
+
+            }
+            Selection form2 = new Selection();
+            form2.Show();
+            this.Hide();
+            form2.FormClosed += (s, args) => this.Close();
+        
+        
+    }
     }
 }

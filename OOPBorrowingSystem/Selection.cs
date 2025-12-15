@@ -46,7 +46,7 @@ namespace OOPBorrowingSystem
             LoginForm form1 = new LoginForm();
             form1.Show();
             this.Hide();
-            form1.FormClosed += (s, args) => this.Close();
+            form1.FormClosed += (s, args) => this.Close();  
         }
     }
 }
