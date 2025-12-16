@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OOPBorrowingSystem
 {
@@ -53,6 +54,10 @@ namespace OOPBorrowingSystem
                 Console.WriteLine(ex.Message);
                 return false;
             }
+        }
+        public void Delete(int id)
+        {
+            _connection.Delete<User>(id);
         }
 
         public List<User> GetAll()
